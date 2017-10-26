@@ -18,20 +18,22 @@ int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR cmd, in
 // now using CUI for simple implementation.
 int main()
 {
-	KSEngine::Engine* pApp;
+	KSEngine::Engine* pApp = new KSEngine::Engine();
 	KSEngine::EngineStruct es;
 	es.SetResolution(1920, 1080);
 
 	try {
-		pApp = new KSEngine::Engine();
 		pApp->Init(es);
 		pApp->Run();
+		pApp->CleanUp();
 	}
 	catch (KException& k_ex) {
 		KLogger::Log(k_ex);
 	}
 	catch (std::exception& ex) {
 		
-	}
+	}		
+	delete pApp;
+
 	return 0;
 }

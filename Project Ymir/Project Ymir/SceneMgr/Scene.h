@@ -4,7 +4,7 @@
 
 #include "../Utils/def.h"
 
-namespace Scene {
+namespace KScene {
 	class SceneMgr;
 
 	enum SceneStatus {
@@ -25,10 +25,12 @@ namespace Scene {
 	protected:
 		// list. Use zone.
 
+		// GameObject List.
+
 	private:
 		static SceneMgr* m_pMgr;
 
-		int m_sceneId;
+		int m_sceneId = -1;
 		std::string m_sceneName;
 		Rect2D m_size;
 	};

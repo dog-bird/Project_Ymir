@@ -34,6 +34,8 @@ namespace KSEngine {
 
 		// Run Loop.
 		int Run();
+
+		void AddEngineComponent(IEngineComponent* pCom);
 	protected:
 
 	private:

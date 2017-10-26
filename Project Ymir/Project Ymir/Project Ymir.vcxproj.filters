@@ -28,7 +28,7 @@
     <Filter Include="소스 파일\SceneMgr">
       <UniqueIdentifier>{766073ab-dcfb-42db-9403-db348597a1f1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\NewFilter1">
+    <Filter Include="소스 파일\JSON">
       <UniqueIdentifier>{2363b5c3-a9ee-4151-a50d-899a2026b000}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -57,7 +57,7 @@
       <Filter>소스 파일\Engine</Filter>
     </ClCompile>
     <ClCompile Include="SceneMgr\SceneMgr.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\SceneMgr</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

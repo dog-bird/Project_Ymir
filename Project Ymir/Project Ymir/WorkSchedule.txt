@@ -2,3 +2,6 @@
 	1. error handling
 	2. engine components
 	3. scripter and scene
+
+10/26 : Error Handling, Engine Component.
+	-> Do scene and Json.
