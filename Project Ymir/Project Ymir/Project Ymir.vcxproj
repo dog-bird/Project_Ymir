@@ -147,22 +147,23 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <None Include="..\..\README.md" />
-    <None Include="Error Handling\Error_Handling.md" />
+    <None Include="ErrorHandling\Error_Handling.md" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Engine\Engine.cpp" />
     <ClCompile Include="Engine\IEngineComponent.cpp" />
-    <ClCompile Include="Error Handling\KException.cpp" />
-    <ClCompile Include="Error Handling\KLogger.cpp" />
+    <ClCompile Include="ErrorHandling\KException.cpp" />
+    <ClCompile Include="ErrorHandling\KLogger.cpp" />
+    <ClCompile Include="JSON\Document.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SceneMgr\SceneMgr.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\Engine.h" />
     <ClInclude Include="Engine\IEngineComponent.h" />
-    <ClInclude Include="Error Handling\Error.h" />
-    <ClInclude Include="Error Handling\KException.h" />
-    <ClInclude Include="Error Handling\KLogger.h" />
+    <ClInclude Include="ErrorHandling\Error.h" />
+    <ClInclude Include="ErrorHandling\KException.h" />
+    <ClInclude Include="ErrorHandling\KLogger.h" />
     <ClInclude Include="JSON\Document.h" />
     <ClInclude Include="JSON\JSONObject.h" />
     <ClInclude Include="JSON\Parser.h" />

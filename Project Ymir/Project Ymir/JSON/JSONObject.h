@@ -7,13 +7,18 @@ namespace JSON {
 		Number,
 		String,
 		Boolean,
-		Null
+		Null,
+		Invalid
 	};
 
 	class JSONObject {
 	public:
+		JSONObject();
+		~JSONObject();
+
 
 	private:
-
+		JSONObject* m_pParent	= nullptr;
+		Type m_type				= Type::Invalid;
 	};
 }

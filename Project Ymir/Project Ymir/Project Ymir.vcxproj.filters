@@ -16,9 +16,6 @@
     <Filter Include="External File">
       <UniqueIdentifier>{1d299c63-2b71-4f9c-a318-fb8b36fd1690}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\Error Handling">
-      <UniqueIdentifier>{ee1205a9-8e65-4666-8fcc-fee762aa25b4}</UniqueIdentifier>
-    </Filter>
     <Filter Include="소스 파일\Engine">
       <UniqueIdentifier>{f97c09d2-3515-48bb-b617-d979eabc2bd7}</UniqueIdentifier>
     </Filter>
@@ -31,24 +28,21 @@
     <Filter Include="소스 파일\JSON">
       <UniqueIdentifier>{2363b5c3-a9ee-4151-a50d-899a2026b000}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\ErrorHandling">
+      <UniqueIdentifier>{ee1205a9-8e65-4666-8fcc-fee762aa25b4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\README.md">
       <Filter>External File</Filter>
     </None>
-    <None Include="Error Handling\Error_Handling.md">
-      <Filter>소스 파일\Error Handling</Filter>
+    <None Include="ErrorHandling\Error_Handling.md">
+      <Filter>소스 파일\ErrorHandling</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Error Handling\KLogger.cpp">
-      <Filter>소스 파일\Error Handling</Filter>
-    </ClCompile>
-    <ClCompile Include="Error Handling\KException.cpp">
-      <Filter>소스 파일\Error Handling</Filter>
     </ClCompile>
     <ClCompile Include="Engine\Engine.cpp">
       <Filter>소스 파일\Engine</Filter>
@@ -59,19 +53,19 @@
     <ClCompile Include="SceneMgr\SceneMgr.cpp">
       <Filter>소스 파일\SceneMgr</Filter>
     </ClCompile>
+    <ClCompile Include="JSON\Document.cpp">
+      <Filter>소스 파일\JSON</Filter>
+    </ClCompile>
+    <ClCompile Include="ErrorHandling\KException.cpp">
+      <Filter>소스 파일\ErrorHandling</Filter>
+    </ClCompile>
+    <ClCompile Include="ErrorHandling\KLogger.cpp">
+      <Filter>소스 파일\ErrorHandling</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Error Handling\KLogger.h">
-      <Filter>소스 파일\Error Handling</Filter>
-    </ClInclude>
-    <ClInclude Include="Error Handling\KException.h">
-      <Filter>소스 파일\Error Handling</Filter>
-    </ClInclude>
     <ClInclude Include="Engine\Engine.h">
       <Filter>소스 파일\Engine</Filter>
-    </ClInclude>
-    <ClInclude Include="Error Handling\Error.h">
-      <Filter>소스 파일\Error Handling</Filter>
     </ClInclude>
     <ClInclude Include="Engine\IEngineComponent.h">
       <Filter>소스 파일\Engine</Filter>
@@ -96,6 +90,15 @@
     </ClInclude>
     <ClInclude Include="JSON\JSONObject.h">
       <Filter>소스 파일\JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="ErrorHandling\Error.h">
+      <Filter>소스 파일\ErrorHandling</Filter>
+    </ClInclude>
+    <ClInclude Include="ErrorHandling\KException.h">
+      <Filter>소스 파일\ErrorHandling</Filter>
+    </ClInclude>
+    <ClInclude Include="ErrorHandling\KLogger.h">
+      <Filter>소스 파일\ErrorHandling</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
