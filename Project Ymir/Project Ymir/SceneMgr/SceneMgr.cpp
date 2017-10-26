@@ -6,7 +6,7 @@ using namespace KScene;
 
 SceneMgr::SceneMgr()
 {
-	std::fill_n(m_curScene, 3, nullptr);
+	std::fill_n(m_curScene, MAX_SCENE_NUMBER, nullptr);
 
 	m_tag = KSEngine::ENGINE_TAG_SCENEMGR;
 }

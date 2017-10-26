@@ -163,6 +163,10 @@
     <ClInclude Include="Error Handling\Error.h" />
     <ClInclude Include="Error Handling\KException.h" />
     <ClInclude Include="Error Handling\KLogger.h" />
+    <ClInclude Include="JSON\Document.h" />
+    <ClInclude Include="JSON\JSONObject.h" />
+    <ClInclude Include="JSON\Parser.h" />
+    <ClInclude Include="JSON\Scanner.h" />
     <ClInclude Include="SceneMgr\Scene.h" />
     <ClInclude Include="SceneMgr\SceneMgr.h" />
     <ClInclude Include="Utils\def.h" />

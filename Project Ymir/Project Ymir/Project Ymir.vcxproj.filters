@@ -85,6 +85,18 @@
     <ClInclude Include="SceneMgr\Scene.h">
       <Filter>소스 파일\SceneMgr</Filter>
     </ClInclude>
+    <ClInclude Include="JSON\Scanner.h">
+      <Filter>소스 파일\JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="JSON\Parser.h">
+      <Filter>소스 파일\JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="JSON\Document.h">
+      <Filter>소스 파일\JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="JSON\JSONObject.h">
+      <Filter>소스 파일\JSON</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="WorkSchedule.txt">
