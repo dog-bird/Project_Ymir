@@ -22,6 +22,9 @@
     <Filter Include="소스 파일\Engine">
       <UniqueIdentifier>{f97c09d2-3515-48bb-b617-d979eabc2bd7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Utils">
+      <UniqueIdentifier>{d28108aa-d6cb-4e04-b417-4f2b98dd6279}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\README.md">
@@ -44,6 +47,9 @@
     <ClCompile Include="Engine\Engine.cpp">
       <Filter>소스 파일\Engine</Filter>
     </ClCompile>
+    <ClCompile Include="Engine\IEngineComponent.cpp">
+      <Filter>소스 파일\Engine</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Error Handling\KLogger.h">
@@ -57,6 +63,12 @@
     </ClInclude>
     <ClInclude Include="Error Handling\Error.h">
       <Filter>소스 파일\Error Handling</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\IEngineComponent.h">
+      <Filter>소스 파일\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\def.h">
+      <Filter>소스 파일\Utils</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

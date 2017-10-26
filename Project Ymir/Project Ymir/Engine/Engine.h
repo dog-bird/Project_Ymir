@@ -2,6 +2,8 @@
 
 #include <Windows.h>
 
+#include "IEngineComponent.h"
+
 namespace KSEngine {
 	class EngineStruct
 	{
@@ -32,7 +34,9 @@ namespace KSEngine {
 
 		// Run Loop.
 		int Run();
+	protected:
+
 	private:
-		
+		IEngineComponent* m_compList[EngineTag::ENGINE_TAG_END ];
 	};
 };

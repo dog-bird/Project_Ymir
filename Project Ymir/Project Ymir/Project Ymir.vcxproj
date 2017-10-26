@@ -151,15 +151,18 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Engine\Engine.cpp" />
+    <ClCompile Include="Engine\IEngineComponent.cpp" />
     <ClCompile Include="Error Handling\KException.cpp" />
     <ClCompile Include="Error Handling\KLogger.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\Engine.h" />
+    <ClInclude Include="Engine\IEngineComponent.h" />
     <ClInclude Include="Error Handling\Error.h" />
     <ClInclude Include="Error Handling\KException.h" />
     <ClInclude Include="Error Handling\KLogger.h" />
+    <ClInclude Include="Utils\def.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="WorkSchedule.txt" />

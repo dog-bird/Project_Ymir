@@ -21,7 +21,7 @@ KSEngine::Engine::~Engine()
 void KSEngine::Engine::Init(EngineStruct & es)
 {
 	KLogger::Log("*** Init Engine ***");
-
+	IEngineComponent::InitSystem(this);
 
 	KLogger::Log("*** Init Engine Success ***");
 }
