@@ -155,6 +155,7 @@
     <ClCompile Include="Error Handling\KException.cpp" />
     <ClCompile Include="Error Handling\KLogger.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="SceneMgr\SceneMgr.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\Engine.h" />
@@ -162,6 +163,8 @@
     <ClInclude Include="Error Handling\Error.h" />
     <ClInclude Include="Error Handling\KException.h" />
     <ClInclude Include="Error Handling\KLogger.h" />
+    <ClInclude Include="SceneMgr\Scene.h" />
+    <ClInclude Include="SceneMgr\SceneMgr.h" />
     <ClInclude Include="Utils\def.h" />
   </ItemGroup>
   <ItemGroup>

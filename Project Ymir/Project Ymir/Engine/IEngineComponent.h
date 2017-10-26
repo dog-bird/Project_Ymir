@@ -13,6 +13,11 @@ namespace KSEngine {
 		ENGINE_TAG_END
 	};
 
+	// string for debug info.
+	namespace {
+		const char* g_tagName[][32] = {"Scene Manager"};
+		const char* g_debugInfo[][32] = { "Init Ok", "Init Failed" };
+	}
 	class IEngineComponent {
 	public:
 		IEngineComponent();
@@ -20,10 +25,11 @@ namespace KSEngine {
 
 		static void InitSystem(Engine* pEngine);
 
-		virtual Result Init() = 0;
+		Result Init();
 		virtual void Update() = 0;
 
 	protected:
+		virtual Result InternalInit() = 0;
 		static Engine* m_pEngine;
 		EngineTag m_tag;
 	private:

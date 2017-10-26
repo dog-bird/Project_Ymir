@@ -1,6 +1,7 @@
 #include "Engine.h"
 
 #include "../Error Handling/Error.h"
+#include "../SceneMgr/SceneMgr.h"
 
 using namespace KSEngine;
 
@@ -22,6 +23,9 @@ void KSEngine::Engine::Init(EngineStruct & es)
 {
 	KLogger::Log("*** Init Engine ***");
 	IEngineComponent::InitSystem(this);
+
+	Scene::SceneMgr* pMgr = new Scene::SceneMgr();
+	pMgr->Init();
 
 	KLogger::Log("*** Init Engine Success ***");
 }
