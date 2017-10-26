@@ -39,7 +39,10 @@
       <Filter>소스 파일\Error Handling</Filter>
     </ClCompile>
     <ClCompile Include="Error Handling\KException.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Error Handling</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Engine.cpp">
+      <Filter>소스 파일\Engine</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -55,5 +58,10 @@
     <ClInclude Include="Error Handling\Error.h">
       <Filter>소스 파일\Error Handling</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="WorkSchedule.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
   </ItemGroup>
 </Project>

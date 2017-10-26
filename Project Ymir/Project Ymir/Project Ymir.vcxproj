@@ -150,6 +150,7 @@
     <None Include="Error Handling\Error_Handling.md" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Engine\Engine.cpp" />
     <ClCompile Include="Error Handling\KException.cpp" />
     <ClCompile Include="Error Handling\KLogger.cpp" />
     <ClCompile Include="main.cpp" />
@@ -159,6 +160,9 @@
     <ClInclude Include="Error Handling\Error.h" />
     <ClInclude Include="Error Handling\KException.h" />
     <ClInclude Include="Error Handling\KLogger.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="WorkSchedule.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
