@@ -1,7 +1,7 @@
 0. Job order
-	1. error handling
+	1. ErrorHandling
 	2. engine components
 	3. scripter and scene
 
-10/26 : Error Handling, Engine Component.
+10/26 : ErrorHandling, Engine Component.
 	-> Do scene and Json.

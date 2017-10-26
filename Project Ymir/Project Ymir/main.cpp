@@ -3,7 +3,7 @@
 #include <exception>
 
 #include "Engine\Engine.h"
-#include "Error Handling\Error.h"
+#include "ErrorHandling\Error.h"
 
 /*
 int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR cmd, int cmdShow)

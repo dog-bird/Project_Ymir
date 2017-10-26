@@ -2,7 +2,7 @@
 
 #include <algorithm>
 
-#include "../Error Handling/Error.h"
+#include "../ErrorHandling/Error.h"
 #include "../SceneMgr/SceneMgr.h"
 
 using namespace KSEngine;

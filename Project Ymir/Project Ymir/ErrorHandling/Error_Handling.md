@@ -1,6 +1,6 @@
-## Error handling
+## ErrorHandling
 1. Intro  
-Error handling has two parts. The first one is an exception. This occurs when serious error happens. The second one is an logger. This can be used to record minor error or log information for debugging.
+ErrorHandling has two parts. The first one is an exception. This occurs when serious error happens. The second one is an logger. This can be used to record minor error or log information for debugging.
 2. Exception  
 As I said, an exception is used in serious error that means program cannot run further. This case occurs when the basic engine component failed to initialize, corrupted resources are found, etc. Be aware that, only in serious situation, exception is used. In minor error, program should go on, for instance, missing files.  
 2.1. Exception handling  

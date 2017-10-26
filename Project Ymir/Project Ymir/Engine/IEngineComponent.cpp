@@ -2,7 +2,7 @@
 
 #include <sstream>
 
-#include "../Error Handling/Error.h"
+#include "../ErrorHandling/Error.h"
 #include <iostream>
 
 using namespace KSEngine;
