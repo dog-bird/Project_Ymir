@@ -16,10 +16,21 @@
     <Filter Include="External File">
       <UniqueIdentifier>{1d299c63-2b71-4f9c-a318-fb8b36fd1690}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Error Handling">
+      <UniqueIdentifier>{ee1205a9-8e65-4666-8fcc-fee762aa25b4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\README.md">
       <Filter>External File</Filter>
     </None>
+    <None Include="Error Handling\Error_Handling.md">
+      <Filter>소스 파일\Error Handling</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

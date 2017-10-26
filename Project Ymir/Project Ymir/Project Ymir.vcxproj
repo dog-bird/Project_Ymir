@@ -147,6 +147,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <None Include="..\..\README.md" />
+    <None Include="Error Handling\Error_Handling.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
