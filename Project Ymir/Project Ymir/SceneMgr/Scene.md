@@ -1,5 +1,4 @@
 ## Scene
 1. Intro  
-asdf
-2. asdf  
-asdf
+Scene is a set of the images. Moreover, this is the controller of the objects. Scenes are contained by SceneMgr. Scene can be transited to
+other Scene.
