@@ -1,7 +1,8 @@
 #include <Windows.h>
 #include <iostream>
+#include <exception>
 
-#include "Error Handling\KLogger.h"
+#include "Error Handling\Error.h"
 
 /*
 int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR cmd, int cmdShow)
@@ -17,6 +18,13 @@ int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR cmd, in
 // now using CUI for simple implementation.
 int main()
 {
-	KLogger::Log("test");
+	try {
+	}
+	catch (KException& k_ex) {
+		KLogger::Log(k_ex);
+	}
+	catch (std::exception& ex) {
+		
+	}
 	return 0;
 }
