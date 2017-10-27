@@ -13,12 +13,19 @@ namespace JSON {
 		Token GetToken();
 
 	private:
+		char GetCh(bool skipSpace);
+		void UnGet();
+
 		enum Status {
 			S_Done,
 			S_InString,
+			S_InVal,
+			S_InNumber,
 			S_Start
 		};
 
 		std::fstream& m_fs;
+		int m_line;
+		int m_pos;
 	};
 };

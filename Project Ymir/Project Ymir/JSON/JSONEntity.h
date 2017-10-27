@@ -18,7 +18,8 @@ namespace JSON {
 		JSONEntity();
 		~JSONEntity();
 
-
+		Type GetType();
+		
 	private:
 		JSONEntity* m_pParent	= nullptr;
 		Type m_type				= Type::Invalid;

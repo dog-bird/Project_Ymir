@@ -11,6 +11,8 @@ namespace JSON {
 		Colon,
 		Comma,
 		String,
+		Number,
+		Boolean,
 		Eof,
 		Invalid
 	};

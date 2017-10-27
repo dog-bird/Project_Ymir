@@ -1,5 +1,7 @@
 #include "Scanner.h"
 
+#include <cctype>
+
 using namespace JSON;
 
 JSON::Scanner::Scanner(std::fstream & fs)
@@ -16,109 +18,118 @@ Token JSON::Scanner::GetToken()
 	Token ret;
 	Status status = S_Start;
 
-	int line = 1, pos = 0;
-	bool save = true;
+	bool save;
 
 	while (status != S_Done)
 	{
-		char ch = m_fs.get();
-		pos += 1;
+		char ch;
 		save = true;
 
 		switch (status)
 		{
 		case JSON::Scanner::S_InString:
+			ch = GetCh(false);
 			if (ch == '"')
 			{
 				save = false;
 				status = S_Done;
 			}
 			// skip new line
-			else if (ch == '\n')
-			{
-				save = false;
-			}
-			else if (ch == EOF)
+			else if (ch == EOF || ch == '\n')
 			{
 				save = false;
 				status = S_Done;
 				ret.token = Invalid;
 			}
-			// normal input
-			else
+			break;
+		case JSON::Scanner::S_InVal:
+			ch = GetCh(false);
+			if (!isalpha(ch))
 			{
-				// nothing to do.
+				if (ch == '\n' || ch == '\t' || ch == ' ' || ch == EOF)
+				{
+					UnGet();
+					save = false;
+					status = S_Done;
+				}
+			}
+			break;
+		case JSON::Scanner::S_InNumber:
+			ch = GetCh(false);
+			if (!isdigit(ch))
+			{
+				if (ch == '\n' || ch == '\t' || ch == ' ' || ch == EOF)
+				{
+					UnGet();
+					save = false;
+					status = S_Done;
+				}
+				// All the other characters without numbers.
+				else
+				{
+					save = false;
+					status = S_Done;
+					ret.token = Invalid;
+				}
 			}
 			break;
 		case JSON::Scanner::S_Start:
-			switch (ch)
+			ch = GetCh(true);
+			ret.line = m_line;
+			ret.pos = m_pos;
+
+			if (isalpha)
 			{
-			case ' ':
-				save = false;
-				break;
-			case '\t':
-				save = false;
-				break;
-			case '\n':
-				line += 1;
-				pos = 1;
-				save = false;
-				break;
-			case '{':
-				ret.token = LeftCurly;
-				ret.line = line;
-				ret.pos = pos;
-				status = S_Done;
-				break;
-			case '}':
-				ret.token = RightCurly;
-				ret.line = line;
-				ret.pos = pos;
-				status = S_Done;
-				break;
-			case '[':
-				ret.token = LeftBrace;
-				ret.line = line;
-				ret.pos = pos;
-				status = S_Done;
-				break;
-			case ']':
-				ret.token = RightBrace;
-				ret.line = line;
-				ret.pos = pos;
-				status = S_Done;
-				break;
-			case ',':
-				ret.token = Comma;
-				ret.line = line;
-				ret.pos = pos;
-				status = S_Done;
-				break;
-			case '"':
-				ret.token = String;
-				ret.line = line;
-				ret.pos = pos;
-				status = S_InString;
-				break;
-			case EOF:
-				ret.token = Eof;
-				ret.line = line;
-				ret.pos = pos;
-				status = S_Done;
-				break;
-			// Invalid char.
-			default:
-				ret.token = Invalid;
-				ret.line = line;
-				ret.pos = pos;
-				status = S_Done;
-				break;
+				ret.token = Boolean;
+				status = S_InVal;
+			}
+			else if (isdigit(ch))
+			{
+				ret.token = Number;
+				status = S_InNumber;
+			}
+			else {
+				switch (ch)
+				{
+				case '{':
+					ret.token = LeftCurly;
+					status = S_Done;
+					break;
+				case '}':
+					ret.token = RightCurly;
+					status = S_Done;
+					break;
+				case '[':
+					ret.token = LeftBrace;
+					status = S_Done;
+					break;
+				case ']':
+					ret.token = RightBrace;
+					status = S_Done;
+					break;
+				case ',':
+					ret.token = Comma;
+					status = S_Done;
+					break;
+				case '"':
+					ret.token = String;
+					status = S_InString;
+					break;
+				case EOF:
+					ret.token = Eof;
+					status = S_Done;
+					break;
+				default:
+					ret.token = Invalid;
+					status = S_Done;
+					break;
+				}
 			}
 			break;
+
+		// Invalid input.
 		default:
 			ret.token = Invalid;
-			ret.line = line;
-			ret.pos = pos;
 			status = S_Done;
 			break;
 		}
@@ -127,5 +138,42 @@ Token JSON::Scanner::GetToken()
 			ret.value.push_back(ch);
 	}
 
+	if (ret.token == Boolean)
+	{
+		// check that is "true" or "false".
+		if (ret.value != "true" && ret.value != "false")
+		{
+			ret.token = Invalid;
+		}
+	}
+
 	return ret;
+}
+
+// If skip space is true,
+// return char without ' ', '\t'.
+// if skip space is false
+// return all char.
+char JSON::Scanner::GetCh(bool skipSpace)
+{
+	char ch;
+	do {
+		ch = m_fs.get();
+		if (ch == '\n') {
+			m_line++;
+			m_pos = 1;
+		}
+		else
+			m_pos++;
+
+	// if skip space is true,
+	// check whether that is space or not.
+	} while (skipSpace && (ch=='\t' || ch == ' ' || '\n'));
+
+	return ch;
+}
+
+void JSON::Scanner::UnGet()
+{
+	m_fs.unget();
 }
