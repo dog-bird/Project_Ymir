@@ -31,7 +31,7 @@ int main()
 		KLogger::Log(k_ex);
 	}
 	catch (std::exception& ex) {
-		
+		KLogger::Log(ex.what());
 	}		
 	delete pApp;
 

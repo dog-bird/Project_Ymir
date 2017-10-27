@@ -1,5 +1,7 @@
 #pragma once
 
+#include "json_def.h"
+
 namespace JSON {
 	enum Type {
 		Object,
@@ -11,14 +13,14 @@ namespace JSON {
 		Invalid
 	};
 
-	class JSONObject {
+	class JSONEntity {
 	public:
-		JSONObject();
-		~JSONObject();
+		JSONEntity();
+		~JSONEntity();
 
 
 	private:
-		JSONObject* m_pParent	= nullptr;
+		JSONEntity* m_pParent	= nullptr;
 		Type m_type				= Type::Invalid;
 	};
 }

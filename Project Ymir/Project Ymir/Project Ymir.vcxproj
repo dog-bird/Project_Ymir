@@ -155,6 +155,8 @@
     <ClCompile Include="ErrorHandling\KException.cpp" />
     <ClCompile Include="ErrorHandling\KLogger.cpp" />
     <ClCompile Include="JSON\Document.cpp" />
+    <ClCompile Include="JSON\Parser.cpp" />
+    <ClCompile Include="JSON\Scanner.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SceneMgr\SceneMgr.cpp" />
   </ItemGroup>
@@ -165,7 +167,8 @@
     <ClInclude Include="ErrorHandling\KException.h" />
     <ClInclude Include="ErrorHandling\KLogger.h" />
     <ClInclude Include="JSON\Document.h" />
-    <ClInclude Include="JSON\JSONObject.h" />
+    <ClInclude Include="JSON\JSONEntity.h" />
+    <ClInclude Include="JSON\json_def.h" />
     <ClInclude Include="JSON\Parser.h" />
     <ClInclude Include="JSON\Scanner.h" />
     <ClInclude Include="SceneMgr\Scene.h" />

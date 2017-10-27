@@ -2,7 +2,7 @@
 
 #include <sstream>
 
-class JSONObject;
+class JSONEntity;
 
 namespace JSON {
 	class Document {
@@ -13,11 +13,11 @@ namespace JSON {
 		bool OpenFile(const char* fileName);
 		std::string GetErrorMsg();
 
-		JSONObject* GetRoot();
+		JSONEntity* GetRoot();
 		void Release();
 
 	private:
-		JSONObject* m_root = nullptr;
+		JSONEntity* m_root = nullptr;
 		std::stringstream m_errorMsg;
 	};
 }
