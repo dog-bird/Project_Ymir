@@ -1,0 +1,7 @@
+{
+	"name": "test",
+	"age" : 25,
+	"gender" : "female"
+	"ability" : ["sword", "magic"],
+	"item" : {"time" : 2, "well" : true }
+}

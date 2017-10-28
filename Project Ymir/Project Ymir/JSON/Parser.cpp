@@ -15,6 +15,8 @@ bool JSON::Parser::Parse(Scanner & scan, JSONEntity ** root)
 
 	// Made element
 	// dfs?
+
+	return true;
 }
 
 std::string JSON::Parser::GetErrorMsg()

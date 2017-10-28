@@ -78,7 +78,7 @@ Token JSON::Scanner::GetToken()
 			ret.line = m_line;
 			ret.pos = m_pos;
 
-			if (isalpha)
+			if (isalpha(ch))
 			{
 				ret.token = Boolean;
 				status = S_InVal;
@@ -112,6 +112,7 @@ Token JSON::Scanner::GetToken()
 					status = S_Done;
 					break;
 				case '"':
+					save = false;
 					ret.token = String;
 					status = S_InString;
 					break;
@@ -168,7 +169,7 @@ char JSON::Scanner::GetCh(bool skipSpace)
 
 	// if skip space is true,
 	// check whether that is space or not.
-	} while (skipSpace && (ch=='\t' || ch == ' ' || '\n'));
+	} while (skipSpace && (ch=='\t' || ch == ' ' || ch == '\n'));
 
 	return ch;
 }

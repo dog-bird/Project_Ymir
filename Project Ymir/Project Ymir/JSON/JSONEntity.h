@@ -23,5 +23,8 @@ namespace JSON {
 	private:
 		JSONEntity* m_pParent	= nullptr;
 		Type m_type				= Type::Invalid;
+		
+		int m_numChild;
+		JSONEntity** m_pChild;
 	};
 }

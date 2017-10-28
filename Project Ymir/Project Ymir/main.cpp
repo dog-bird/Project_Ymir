@@ -2,6 +2,7 @@
 #include <iostream>
 #include <exception>
 
+#include "JSON\Scanner.h"
 #include "Engine\Engine.h"
 #include "ErrorHandling\Error.h"
 

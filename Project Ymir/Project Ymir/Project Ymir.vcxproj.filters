@@ -66,7 +66,7 @@
       <Filter>소스 파일\JSON</Filter>
     </ClCompile>
     <ClCompile Include="JSON\Parser.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\JSON</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
