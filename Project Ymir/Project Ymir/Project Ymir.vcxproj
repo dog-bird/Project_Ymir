@@ -155,6 +155,7 @@
     <ClCompile Include="ErrorHandling\KException.cpp" />
     <ClCompile Include="ErrorHandling\KLogger.cpp" />
     <ClCompile Include="JSON\Document.cpp" />
+    <ClCompile Include="JSON\JSONEntity.cpp" />
     <ClCompile Include="JSON\Parser.cpp" />
     <ClCompile Include="JSON\Scanner.cpp" />
     <ClCompile Include="main.cpp" />

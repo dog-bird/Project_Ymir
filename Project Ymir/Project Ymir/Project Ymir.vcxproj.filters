@@ -31,6 +31,9 @@
     <Filter Include="소스 파일\ErrorHandling">
       <UniqueIdentifier>{ee1205a9-8e65-4666-8fcc-fee762aa25b4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\UnitTest">
+      <UniqueIdentifier>{6a0a2012-d273-4b8f-accf-a498d1323018}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\README.md">
@@ -66,6 +69,9 @@
       <Filter>소스 파일\JSON</Filter>
     </ClCompile>
     <ClCompile Include="JSON\Parser.cpp">
+      <Filter>소스 파일\JSON</Filter>
+    </ClCompile>
+    <ClCompile Include="JSON\JSONEntity.cpp">
       <Filter>소스 파일\JSON</Filter>
     </ClCompile>
   </ItemGroup>
