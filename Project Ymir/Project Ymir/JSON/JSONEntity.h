@@ -6,13 +6,13 @@ namespace JSON {
 	class Parser;
 
 	enum Type {
-		Object,
-		Array,
-		Number,
-		String,
-		Boolean,
-		Null,
-		Invalid
+		E_Object,
+		E_Array,
+		E_Number,
+		E_String,
+		E_Boolean,
+		E_Null,
+		E_Invalid
 	};
 
 	class JSONEntity {
@@ -32,7 +32,7 @@ namespace JSON {
 		JSONEntity* FindChild(std::string name);
 
 		JSONEntity* m_pParent	= nullptr;
-		Type m_type				= Type::Invalid;
+		Type m_type				= Type::E_Invalid;
 		std::string m_name;
 
 		std::string m_value;

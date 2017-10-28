@@ -20,7 +20,7 @@ bool JSON::JSONEntity::GetValue(std::string name, JSONEntity *& object)
 	JSONEntity* child = FindChild(name);
 	if (child == nullptr)
 		return false;
-	if (child->GetType() != Object || child->GetType() != Array)
+	if (child->GetType() != E_Object || child->GetType() != E_Array)
 		return false;
 
 	object = child;
@@ -32,7 +32,7 @@ bool JSON::JSONEntity::GetValue(std::string name, std::string & str)
 	JSONEntity* child = FindChild(name);
 	if (child == nullptr)
 		return false;
-	if (child->GetType() != String)
+	if (child->GetType() != E_String)
 		return false;
 
 	str = child->m_value;
@@ -44,7 +44,7 @@ bool JSON::JSONEntity::GetValue(std::string name, int & num)
 	JSONEntity* child = FindChild(name);
 	if (child == nullptr)
 		return false;
-	if (child->GetType() != Number)
+	if (child->GetType() != E_Number)
 		return false;
 
 	num = atoi(child->m_value.c_str());
@@ -56,7 +56,7 @@ bool JSON::JSONEntity::GetValue(std::string name, bool & b)
 	JSONEntity* child = FindChild(name);
 	if (child == nullptr)
 		return false;
-	if (child->GetType() != Boolean)
+	if (child->GetType() != E_Boolean)
 		return false;
 
 	b = child->m_value == "true" ? true : false;
@@ -88,4 +88,6 @@ JSONEntity * JSON::JSONEntity::FindChild(std::string name)
 			break;
 		ret = ret->m_sibling;
 	}
+
+	return ret;
 }
