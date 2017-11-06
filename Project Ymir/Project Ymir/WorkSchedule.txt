@@ -5,3 +5,21 @@
 
 10/26 : ErrorHandling, Engine Component.
 	-> Do scene and Json.
+
+11/06 : New week
+This week job : parser, render core, windows
+
+11/13 : Next week
+Scene, UI, Object.
+
+11/20 : Future
+Resource Loading, Input
+
+11/27 : ??
+Sound
+
+12 -> Game dev starts.
+Collision system
+command system
+Damage control
+Game Logic flow

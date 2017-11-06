@@ -34,6 +34,21 @@
     <Filter Include="소스 파일\UnitTest">
       <UniqueIdentifier>{6a0a2012-d273-4b8f-accf-a498d1323018}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Object">
+      <UniqueIdentifier>{79874222-6efb-41a7-8e91-1b2c33d49722}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\SceneMgr\UI">
+      <UniqueIdentifier>{a7660483-25f1-40de-9345-a7b4c56c6227}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Windows">
+      <UniqueIdentifier>{10f60aa7-d95e-4d23-b6a5-468274fe10ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Render">
+      <UniqueIdentifier>{55fe0b1d-9e81-4ae7-a0e0-50392c82eab3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Resource">
+      <UniqueIdentifier>{4012cb31-1780-428d-adcf-cecc702b204a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\README.md">
