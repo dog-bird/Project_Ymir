@@ -8,6 +8,7 @@
 
 11/06 : New week
 This week job : parser, render core, windows
+Do more on this week. I hate test.
 
 11/13 : Next week
 Scene, UI, Object.
